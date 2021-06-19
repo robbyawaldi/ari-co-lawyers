@@ -1,16 +1,18 @@
-html,
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: 'Manrope', sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
+:root {
+    --bg-color-primary: #313849;
+    --bg-color-secondary: #2C3241;
+    --font-color-primary: #B7B5B5;
+    --font-color-secondary: #898989;
+    --font-color-black: #231F20;
+    --font-color-white: #FCFCFC;
+    --font-color-gold: #FFA000;
+    --bg-button: #D8A000;
 }
