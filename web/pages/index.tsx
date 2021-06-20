@@ -1,11 +1,13 @@
 import React from "react"
-import { HomeHeader } from "../components/organisms/HomeHeader"
+import { HomeMiddle } from "../components/organisms/HomeMiddle"
+import { HomeTop } from "../components/organisms/HomeTop"
 import { LayoutFront } from "../components/templates/LayoutFront"
 
 const Index = () => {
   return (
     <LayoutFront>
-      <HomeHeader />
+      <HomeTop />
+      <HomeMiddle />
     </LayoutFront>
   )
 }

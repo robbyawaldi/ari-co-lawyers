@@ -1,0 +1,32 @@
+.body {
+    display: grid;
+    grid-template-rows: 2fr 1fr 2fr 1fr;
+    gap: .5rem;
+    padding: 1rem;
+    max-width: 22.9rem;
+    height: 19rem;
+    outline: 1px solid var(--clr-bg-primary);
+}
+
+.body > :last-child {
+    justify-self: flex-end;
+    text-decoration: underline;
+}
+
+.body > h4 {
+    font-size: var(--fs-lg);
+    font-weight: 600;
+}
+
+.body > p {
+    height: 8rem;
+}
+
+.gold {
+    background-color: var(--clr-btn-primary);
+    color: var(--clr-f-white);
+}
+
+.white {
+    background-color: var(--clr-f-white);
+}

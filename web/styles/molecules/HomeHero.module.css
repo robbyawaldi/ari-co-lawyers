@@ -57,7 +57,7 @@
 
 @media screen and (min-width: 768px) {
     .body {
-        min-height: 90vh;
+        min-height: 80vh;
         grid-template-columns: 1fr 1fr;
         background: url(/assets/accents/dots.svg);
         background-repeat: no-repeat;
