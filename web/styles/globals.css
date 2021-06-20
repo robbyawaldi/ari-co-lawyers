@@ -2,17 +2,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body {
-    font-family: 'Manrope', sans-serif;
+:root {
+    --ff-body: 'Manrope', sans-serif;
+    --clr-bg-primary: hsl(223, 20%, 24%);
+    --clr-bg-secondary: hsl(223, 19%, 21%);
+    --clr-f-primary: hsl(0, 1%, 71%);
+    --clr-f-secondary: hsl(0, 0%, 54%);
+    --clr-f-black: hsl(345, 6%, 13%);
+    --clr-f-white: hsl(0, 0%, 99%);
+    --clr-f-gold: hsl(38, 100%, 50%);
+    --clr-btn-primary: hsl(44, 100%, 42%);
+    -fs-xs: .75rem;
+    -fs-sm: .875rem;
+    -fs-base: 1rem;
+    -fs-lg: 1.125rem;
+    -fs-xl: 1.25rem;
+    -fs-7xl: clamp(1.5rem, 1rem + 10vw, 4.5rem);
 }
 
-:root {
-    --bg-color-primary: #313849;
-    --bg-color-secondary: #2C3241;
-    --font-color-primary: #B7B5B5;
-    --font-color-secondary: #898989;
-    --font-color-black: #231F20;
-    --font-color-white: #FCFCFC;
-    --font-color-gold: #FFA000;
-    --bg-button: #D8A000;
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--ff-body);
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
 }
