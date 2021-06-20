@@ -1,0 +1,10 @@
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-f-white);
+}
+
+.body > * {
+    margin-right: 2rem;
+}

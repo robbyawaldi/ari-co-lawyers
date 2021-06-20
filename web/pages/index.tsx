@@ -1,5 +1,13 @@
+import React from "react"
+import { HomeHeader } from "../components/organisms/HomeHeader"
+import { LayoutFront } from "../components/templates/LayoutFront"
+
 const Index = () => {
-  return <h1>hello world</h1>
+  return (
+    <LayoutFront>
+      <HomeHeader />
+    </LayoutFront>
+  )
 }
 
 export default Index

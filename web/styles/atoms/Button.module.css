@@ -1,0 +1,13 @@
+.primary, .secondary {
+    border-radius: 8px;
+}
+
+.primary {
+    background-color: var(--clr-btn-primary);
+    color: var(--clr-f-white);
+}
+
+.secondary {
+    color: var(--clr-f-gold);
+    outline: 1px solid var(--clr-btn-primary);
+}
