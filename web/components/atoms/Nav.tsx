@@ -12,16 +12,16 @@ export const Nav: React.FC<NavProps> = ({ }) => {
                 <li>Home</li>
             </Link>
             <Link href="">
-                <li>Team</li>
+                <li>Tim</li>
             </Link>
             <Link href="">
-                <li>About</li>
+                <li>Tentang</li>
             </Link>
             <Link href="">
-                <li>About</li>
+                <li>Blog</li>
             </Link>
             <Link href="">
-                <li>Contact Us</li>
+                <li>Kontak Kami</li>
             </Link>
         </ul>
     );

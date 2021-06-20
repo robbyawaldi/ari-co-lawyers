@@ -12,7 +12,7 @@ export const NavBar: React.FC<NavBarProps> = ({ }) => {
         <div className={styles.body}>
             <Image src="/assets/logo/logo.svg" alt="logo" width={210} height={54} />
             <Nav />
-            <Button variant="secondary" width="6.25rem" height="2.5rem">Login</Button>
+            <Button variant="secondary" width="6.25rem" height="2.5rem">Masuk</Button>
             <Button variant="primary" width="6.25rem" height="2.5rem">Daftar</Button>
         </div>
     );

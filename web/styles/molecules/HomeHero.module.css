@@ -1,0 +1,67 @@
+.body {
+    display: grid;
+    align-items: center;
+}
+
+.content {
+    color: var(--clr-f-white);
+}
+
+.content h1 {
+    font-size: var(--fs-7xl);
+    font-weight: 800;
+}
+
+.content p {
+    font-size: var(--fs-xl);
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+
+.content a {
+    color: var(--clr-f-gold);
+    text-decoration: underline;
+}
+
+.hero {
+    justify-self: center;
+}
+
+.heroImage {
+    width: 301px;
+    height: 283px;
+    background-color: var(--clr-f-secondary);
+    position: relative;
+    border-bottom-left-radius: 18px;
+    transform: translateX(20%);
+}
+
+.heroImage::before, .heroImage::after {
+    content: '';
+    width: 200px;
+    height: 120px;
+    background-color: var(--clr-f-primary);
+    position: absolute;
+    border-radius: 18px;
+}
+
+.heroImage::before {
+    top: -20%;
+    left: -20%;
+}
+
+.heroImage::after {
+    right: -20%;
+    bottom: -20%;
+}
+
+@media screen and (min-width: 768px) {
+    .body {
+        min-height: 90vh;
+        grid-template-columns: 1fr 1fr;
+        background: url(/assets/accents/dots.svg);
+        background-repeat: no-repeat;
+        background-size: 30%;
+        background-position: 60% 40%;
+    }
+}
