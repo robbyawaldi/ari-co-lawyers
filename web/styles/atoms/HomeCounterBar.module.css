@@ -1,0 +1,37 @@
+.body {
+    width: min(80vw, 48rem) ;
+    padding: 2rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: rgba(143, 153, 179, 0.5);
+    border-radius: 40px;
+    place-items: center;
+    position: absolute;
+    bottom: 15%;
+    right: 0;
+}
+
+.body> :nth-child(even) {
+    border-left: 1px solid var(--clr-f-primary);
+    border-right: 1px solid var(--clr-f-primary);
+}
+
+.item {
+    width: 14rem;
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item>div {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--clr-f-gold);
+    line-height: 3rem;
+}
+
+.item > p {
+    font-size: var(--fs-base);
+}

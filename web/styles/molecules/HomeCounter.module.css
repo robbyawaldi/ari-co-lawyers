@@ -1,0 +1,51 @@
+.body {
+    height: 40rem;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--clr-bg-secondary);
+    width: 80%;
+    height: 40rem;
+    z-index: -1;
+    border-top-left-radius: 50px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    color: var(--clr-f-white);
+    width: 90%;
+    position: relative;
+}
+
+.content > div:not(.background) {
+    padding: 2rem 0;
+    width: 45vw;
+}
+
+.content > * > h1 {
+    font-size: var(--fs-2xl);
+    font-weight: 800;
+    line-height: 2.5rem;
+}
+
+.content > * > p {
+    font-size: var(--fs-xl);
+    line-height: 2.5rem;
+}
+
+.background {
+    background: url(/assets/backgrounds/bg-home-middle.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 427px;
+    height: 489px;
+}

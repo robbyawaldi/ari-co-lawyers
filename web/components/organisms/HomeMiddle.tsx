@@ -2,6 +2,7 @@ import React from 'react'
 import { HomeServices } from '../molecules/HomeServices';
 import styles from '../../styles/organisms/HomeMiddle.module.css'
 import { HomeTeam } from '../molecules/HomeTeam';
+import { HomeCounter } from '../molecules/HomeCounter';
 
 interface HomeMiddleProps {
 }
@@ -11,6 +12,7 @@ export const HomeMiddle: React.FC<HomeMiddleProps> = ({ }) => {
         <div className={styles.body}>
             <HomeServices />
             <HomeTeam />
+            <HomeCounter />
         </div>
     );
 }
