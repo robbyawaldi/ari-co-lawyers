@@ -1,0 +1,17 @@
+.body {
+    width: min(21rem, 90vw);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--clr-f-white);
+}
+
+.body > :first-child {
+    width: 100%;
+    height: 18rem;
+    background-color: var(--clr-f-primary);
+    margin-bottom: 2rem;
+}
+
+.body > :not(:nth-child()) {
+    margin-bottom: 1rem;
+}
