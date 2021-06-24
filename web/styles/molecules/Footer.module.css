@@ -1,0 +1,16 @@
+.primary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid var(--clr-f-secondary);
+}
+
+.primary > * {
+    margin-bottom: 2rem !important;
+}
+
+.secondary {
+    display: flex;
+    justify-content: space-between;
+    color: var(--clr-f-white);
+}
