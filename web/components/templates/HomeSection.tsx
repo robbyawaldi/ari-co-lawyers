@@ -11,13 +11,13 @@ export const HomeSection: React.FC<HomeSectionProps> = ({ backgroundTitle, title
         <div className={styles.body}>
             <style dangerouslySetInnerHTML={{
                 __html: [
-                    '.title:before {',
+                    `.${backgroundTitle}:before {`,
                     `content: "${backgroundTitle}";`,
                     '}'
                 ].join('\n')
             }}>
             </style>
-            <h4 className="title">{title}</h4>
+            <h4 className={`${backgroundTitle}`}>{title}</h4>
             {children}
         </div>
     );

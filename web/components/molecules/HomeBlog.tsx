@@ -14,6 +14,8 @@ export const HomeBlog: React.FC<HomeBlogProps> = ({ }) => {
             <HomeSection backgroundTitle="BLOG" title="Blog Terbaru">
                 <div className={styles.body}>
                     <BlogCard />
+                    <BlogCard />
+                    <BlogCard />
                 </div>
             </HomeSection>
         </Section>
