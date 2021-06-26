@@ -4,7 +4,7 @@ import { Entity, Column, PrimaryGeneratedColumn, BaseEntity } from 'typeorm';
 export class Users extends BaseEntity {
 
     @PrimaryGeneratedColumn()
-    id: number;
+    id : number;
 
     @Column({ length: 100 })
     name  :string;
@@ -20,20 +20,31 @@ export class Users extends BaseEntity {
     }) 
     remember_token:string;
 
+    @Column({
+      nullable: true
+    }) 
+    provider:string;
+
     @Column('boolean') 
     role:boolean;
 
     @Column({
       nullable: true,
       type : 'longtext',
+    })
+    picture:string;
+
+    @Column({
+      nullable: true,
+      type : 'longtext',
     }) 
-    avatar:string;
+    accessToken:string;
 
     @Column('timestamp') 
     email_verified_at : Date | string;
 
     @Column('timestamp') 
-    created_at:Date | string;
+    created_at :Date | string;
     
     @Column('timestamp') 
     updated_at:Date | string;

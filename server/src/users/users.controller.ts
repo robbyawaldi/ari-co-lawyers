@@ -5,10 +5,11 @@ import { LocalAuthGuard } from '../auth/local-auth.guard';
 import { AuthService } from '../auth/auth.service';
 import { ApiBearerAuth } from '@nestjs/swagger';
 import { UsersService } from './users.service';
-
+import { AuthGuard } from '@nestjs/passport';
 
 @Controller('user')
 @ApiBearerAuth('JWT')
+@UseGuards(AuthGuard('google'))
 @UseGuards(JwtAuthGuard)
 export class UsersController {
     constructor(
