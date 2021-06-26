@@ -25,7 +25,7 @@
     justify-content: space-between;
 }
 
-.item>div {
+.item> span {
     font-size: 3rem;
     font-weight: 800;
     color: var(--clr-f-gold);
