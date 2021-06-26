@@ -8,8 +8,8 @@ const Index = () => {
   return (
     <LayoutFront>
       <HomeTop />
-      <HomeMiddle />
-      <HomeBottom />
+      {/* <HomeMiddle /> */}
+      {/* <HomeBottom /> */}
     </LayoutFront>
   )
 }
