@@ -28,31 +28,36 @@
 }
 
 .heroImage {
-    width: 301px;
-    height: 283px;
-    background-color: var(--clr-f-secondary);
+    width: 20rem;
+    height: 20rem;
+    background: url(/assets/accents/home_accent_2.png);
+    background-repeat: no-repeat;
     position: relative;
     border-bottom-left-radius: 18px;
-    transform: translateX(20%);
 }
 
 .heroImage::before, .heroImage::after {
     content: '';
-    width: 200px;
-    height: 120px;
-    background-color: var(--clr-f-primary);
     position: absolute;
     border-radius: 18px;
 }
 
 .heroImage::before {
+    background: url(/assets/accents/home_accent_1.png);
+    background-repeat: no-repeat;
     top: -20%;
-    left: -20%;
+    left: -30%;
+    width: 24rem;
+    height: 15rem;
 }
 
 .heroImage::after {
-    right: -20%;
-    bottom: -20%;
+    background: url(/assets/accents/home_accent_3.png);
+    background-repeat: no-repeat;
+    right: -50%;
+    bottom: -50%;
+    width: 24rem;
+    height: 15rem;
 }
 
 @media screen and (min-width: 768px) {
