@@ -1,6 +1,7 @@
 .body {
     display: grid;
     place-items: center;
+    padding-top: 2rem;
 }
 
 .body :first-child {

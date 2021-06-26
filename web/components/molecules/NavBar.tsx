@@ -10,7 +10,7 @@ interface NavBarProps {
 
 export const NavBar: React.FC<NavBarProps> = ({ }) => {
     return (
-        <Section isFull={false}>
+        <Section isFull={false} isUsepadding={false}>
             <div className={styles.body}>
                 <Image src="/assets/logo/logo.svg" alt="logo" width={210} height={54} />
                 <Nav />
