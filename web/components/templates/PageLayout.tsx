@@ -8,7 +8,7 @@ interface PageLayoutProps {
 export const PageLayout: React.FC<PageLayoutProps> = ({ children, title }) => {
     return (
         <div className={styles['body']}>
-            {title}
+            <h1>{title}</h1>
             {children}
         </div>
     );
