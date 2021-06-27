@@ -26,17 +26,17 @@ export class MailService {
         const info = await this.authEmail().sendMail({
             from: '"NO REPLY" <sancikob@gmail.com>',
             to: email,
-            subject: "Verfiy Email KPI UNAND",
+            subject: "Verfiy Email ARI",
             html: `<p style="margin: 0;"><b>Hai `+name+`</b>, Ketuk tombol di bawah ini untuk mengonfirmasi alamat email Anda. <a href="`+getBaseUrl()+`verfiyemail/`+token+`" target="_blank">Verfikasi Akun</a></p>`,
         });
 
-        return "Message sent: " + info;
+        return "Message sent: " + info.messageId;
     }
     async sendForgot(name:string,email: string,token: string){
         const info = await this.authEmail().sendMail({
             from: '"NO REPLY" <sancikob@gmail.com>',
             to: email,
-            subject: "Forgot Email KPI UNAND",
+            subject: "Forgot Email ARI",
             html: `<p style="margin: 0;"><b>Hai `+name+`</b>, Ketuk tombol di bawah ini untuk forgot email Anda. <a href="`+getBaseUrl()+`forgotemail/`+token+`" target="_blank">Change Password</a></p>`,
         });
         console.log(info)

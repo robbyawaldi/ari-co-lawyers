@@ -27,6 +27,13 @@ export class UsersService {
         return this.respone;
     }
     
+    async getEmail(email:string){
+        let getDetail = await this.usersRepository.findOne({
+            where: [{ "email": email }]
+        });
+        return getDetail;
+    }
+
     async detailUser(id:number){
         let getDetail = await this.usersRepository.findOne({
             where: [{ "id": id }]
@@ -38,20 +45,22 @@ export class UsersService {
             message : "Get Detail User",
         }
     }
+
     async updateUser(users: any,id: number) {
         users.id = id
         console.log(users)
         let updateUser = this.usersRepository.save(users)
 
-        // return this.respone = {
-        //     code : 200,
-        //     message : updateUser,
-        // }
+        return this.respone = {
+            code : 200,
+            message : updateUser,
+        }
     }
 
     async createUser(users: Users) {
         let hash = await argon2.hash(users.password);
         let token = Math.random().toString(36).substr(2, 9);
+        let sendMail = await this.send.sendVerify(users.name,users.email,token);
         const create = this.usersRepository.create({ 
             name: users.name, 
             email: users.email,
@@ -62,7 +71,6 @@ export class UsersService {
             updated_at: moment().format(),
         });
         let save = await this.usersRepository.save(create);
-        let sendMail = await this.send.sendVerify(users.name,users.email,token);
         return  this.respone = {
             code : 200,
             type : 'Bearer',
@@ -100,9 +108,9 @@ export class UsersService {
         });
         if (checkEmail) {
             let token = Math.random().toString(36).substr(2, 9);
+            let sendMail = await this.send.sendForgot(checkEmail.name,checkEmail.email,token);
             checkEmail.remember_token = token;
             await this.usersRepository.save(checkEmail);
-            let sendMail = await this.send.sendForgot(checkEmail.name,checkEmail.email,token);
             this.respone = {
                 code : 200,
                 message : sendMail,
