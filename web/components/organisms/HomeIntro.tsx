@@ -1,16 +1,14 @@
 import React from 'react'
 import { HomeHero } from '../molecules/HomeHero';
-import { NavBar } from '../molecules/NavBar';
-import styles from '../../styles/organisms/HomeTop.module.css'
+import styles from '../../styles/organisms/HomeIntro.module.css'
 import { HomeServices } from '../molecules/HomeServices';
 
-interface HomeTopProps {
+interface HomeIntroProps {
 }
 
-export const HomeTop: React.FC<HomeTopProps> = ({ }) => {
+export const HomeIntro: React.FC<HomeIntroProps> = ({ }) => {
     return (
         <div className={styles.body}>
-            <NavBar />
             <HomeHero />
             <HomeServices />
         </div>

@@ -1,16 +1,20 @@
 import React from "react"
-import { HomeBottom } from "../components/organisms/HomeBottom"
-import { HomeMiddle } from "../components/organisms/HomeMiddle"
-import { HomeTop } from "../components/organisms/HomeTop"
-import { LayoutFront } from "../components/templates/LayoutFront"
+import { HomeQuote } from "../components/atoms/HomeQuote"
+import { HomeBlog } from "../components/molecules/HomeBlog"
+import { HomeCounter } from "../components/molecules/HomeCounter"
+import { HomeTeam } from "../components/molecules/HomeTeam"
+import { HomeIntro } from "../components/organisms/HomeIntro"
+import { MainLayout } from "../components/templates/MainLayout"
 
 const Index = () => {
   return (
-    <LayoutFront>
-      <HomeTop />
-      <HomeMiddle />
-      <HomeBottom />
-    </LayoutFront>
+    <MainLayout>
+      <HomeIntro />
+      <HomeTeam />
+      <HomeCounter />
+      <HomeBlog />
+      <HomeQuote />
+    </MainLayout>
   )
 }
 
