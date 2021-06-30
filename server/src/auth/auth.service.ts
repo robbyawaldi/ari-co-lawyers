@@ -53,25 +53,48 @@ export class AuthService {
       };
     }else{
       const getusers = await this.usersService.getEmail(emailGoogle.email);
+      let data = {};
       if (getusers && getusers.accessToken == null) {
         getusers.picture = emailGoogle.picture;
         getusers.accessToken = emailGoogle.accessToken;
         getusers.provider = emailGoogle.provider;
-        getusers.save()
+        getusers.save();
+        data = {
+          id: getusers.id,
+          name: getusers.name,
+          email: getusers.email,
+          role: getusers.role,
+        }
+      }else{
+        data = {
+          id: getusers.id,
+          name: getusers.name,
+          email: getusers.email,
+          role: getusers.role,
+        }
+      } 
+      if(!getusers){
+        users.password = emailGoogle.id;
+        users.name = emailGoogle.fullname,
+        users.email = emailGoogle.email,
+        users.picture = emailGoogle.picture,
+        users.provider = emailGoogle.provider
+        users.accessToken = emailGoogle.accessToken
+        const createUsers = await this.usersService.createUser(users)
+        data = {
+          id: createUsers.data.id,
+          name: createUsers.data.name,
+          email: createUsers.data.email,
+          role: createUsers.data.role,
+        }
       }
-      // else{
-      //   users.password = emailGoogle.id;
-      //   users.name = emailGoogle.fullname,
-      //   users.email = emailGoogle.email,
-      //   users.picture = emailGoogle.picture,
-      //   users.provider = emailGoogle.provider
-      //   users.accessToken = emailGoogle.accessToken
-      //   const createUsers = await this.usersService.createUser(users)
-      // }
+      const payload = data;
+      console.log(payload)
       this.respone = {
         code : 200,
         data : emailGoogle,
         message: 'User information from google',
+        token: this.jwtService.sign(payload),
       };
     }
     return this.respone
